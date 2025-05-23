@@ -1,0 +1,18 @@
+Component,Pin/Terminal,Connection,Description
+Energy Harvesting Antenna Array,RF Input,Rectifier AC Input,Receives ambient RF signals and sends AC signal to rectifier
+Rectifier Circuit,AC Input 1,From Antenna RF Input 1,First AC input terminal
+Rectifier Circuit,AC Input 2,From Antenna RF Input 2,Second AC input terminal
+Rectifier Circuit,DC Output +,Boost Converter Input +,Positive DC output after rectification
+Rectifier Circuit,DC Output -,Boost Converter Input -,Negative DC output after rectification
+Boost Converter,Input +,From Rectifier DC Output +,DC input positive terminal
+Boost Converter,Input -,From Rectifier DC Output -,DC input negative terminal
+Boost Converter,Output +,Energy Storage Capacitor +,Boosted DC output positive terminal
+Boost Converter,Output -,Energy Storage Capacitor -,Boosted DC output negative terminal
+Energy Storage Capacitor,Positive Terminal,Boost Converter Output +,Stores energy at boosted voltage
+Energy Storage Capacitor,Negative Terminal,Boost Converter Output -,Ground reference for capacitor
+MOSFET Gate,Control Signal,Microcontroller PWM Output,Switching signal to control energy injection timing
+MOSFET Drain,Load Side,Energy Loop Injection Point,Point where energy is injected into loop
+MOSFET Source,Ground,Common Ground,Reference ground for MOSFET
+Voltage Sensor,Input,Energy Loop Injection Point,Monitors voltage at injection point
+Current Sensor,Input,Energy Loop Injection Point,Measures current flow at injection point
+Microcontroller PWM Output,GPIO Pin,MOSFET Gate,Controls MOSFET switching
