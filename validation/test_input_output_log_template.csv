@@ -1,0 +1,4 @@
+timestamp,test_id,module_tested,input_parameters,expected_output,actual_output,environment_notes,anomaly_detected,comments
+2025-05-23T00:00:00Z,TST-001,AntennaArray,"{'voltage': 0.2, 'distance': 2.5}",0.3,0.29,"Lab ambient, no interference",FALSE,"Minor deviation within error margin"
+2025-05-23T00:01:00Z,TST-002,CheckpointCharger,"{'incoming_energy': 0.25}",0.25,0.26,"Stable loop simulation",FALSE,"Possible rounding adjustment"
+2025-05-23T00:02:00Z,TST-003,LoopReinjection,"{'packet_energy': 0.26, 'loss_expected': 0.01}",0.25,0.24,"Loop with artificial impedance",TRUE,"Investigate energy drop"
