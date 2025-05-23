@@ -1,0 +1,32 @@
+{
+  "config": {
+    "initial_energy": 100.0,
+    "decay_rate": 0.02,
+    "checkpoint_positions": [5, 10, 15],
+    "checkpoint_boost": 1.5,
+    "min_energy_threshold": 0.01,
+    "max_iterations": 20
+  },
+  "results": [
+    {"step": 1, "energy": 98.0},
+    {"step": 2, "energy": 96.04},
+    {"step": 3, "energy": 94.1192},
+    {"step": 4, "energy": 92.2368},
+    {"step": 5, "energy": 91.3921},
+    {"step": 6, "energy": 89.5643},
+    {"step": 7, "energy": 87.7730},
+    {"step": 8, "energy": 86.0175},
+    {"step": 9, "energy": 84.2972},
+    {"step": 10, "energy": 83.6113},
+    {"step": 11, "energy": 81.9391},
+    {"step": 12, "energy": 80.3003},
+    {"step": 13, "energy": 78.6943},
+    {"step": 14, "energy": 77.1204},
+    {"step": 15, "energy": 76.5780},
+    {"step": 16, "energy": 75.0464},
+    {"step": 17, "energy": 73.5455},
+    {"step": 18, "energy": 72.0746},
+    {"step": 19, "energy": 70.6331},
+    {"step": 20, "energy": 69.2205}
+  ]
+}
