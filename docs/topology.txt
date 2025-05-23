@@ -1,0 +1,40 @@
+IX-T Ambient Energy Loop Topology
+----------------------------------
+
+        [ Start / Injection Point ]
+                   |
+                   v
+             +------------+
+             |  Energy    |
+             |   Loop     |
+             +------------+
+                   |
+                   v
+        +---------------------+
+        |  Checkpoint 1       |
+        |  +5.0 units         |
+        +---------------------+
+                   |
+                   v
+        +---------------------+
+        |  Checkpoint 2       |
+        |  +7.5 units         |
+        +---------------------+
+                   |
+                   v
+        +---------------------+
+        |  Checkpoint 3       |
+        |  +10.0 units        |
+        +---------------------+
+                   |
+                   v
+             +------------+
+             |   Loop     |
+             |  Advances  |
+             +------------+
+                   |
+                   +---> Repeat N steps
+
+Energy decays at each loop advance by loss factor before checkpoints apply boosts.
+
+System is bounded: max energy = initial energy.
