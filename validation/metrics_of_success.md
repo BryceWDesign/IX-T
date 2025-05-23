@@ -1,49 +1,31 @@
-# IX-T Metrics of Success
+# Metrics of Success for IX-T Project
 
-This document outlines the measurable criteria used to evaluate the feasibility and simulated performance of the IX-T ambient energy loop system. These metrics allow both developers and external reviewers to determine whether the system demonstrates practical potential based on logged and analyzed data.
+This document defines clear, objective criteria to evaluate the success and feasibility of the IX-T energy loop system.
 
----
+## Key Performance Indicators (KPIs)
 
-## 1. **Power Consistency**
-- **Definition**: Stability of power output at each checkpoint over time.
-- **Target**: Variance within ±5% of mean power value at each checkpoint.
-- **Evaluation**: Visualized using power trend plots; quantified with standard deviation and coefficient of variation.
+1. **Energy Retention Rate**  
+   - The system should retain at least 95% of the initial energy per complete loop without external input.
 
----
+2. **Energy Amplification Factor**  
+   - Demonstrable increase in energy after passing through all checkpoints, targeting a minimum 5% energy boost per checkpoint.
 
-## 2. **Net Power Differential**
-- **Definition**: Total power observed across checkpoints versus initial input.
-- **Target**: Ideally close to zero for validation of lossless simulation; any net gain must be accompanied by explanation of energy sourcing (e.g., ambient input).
-- **Evaluation**: Compare summed power across all checkpoints using data analysis script (`analysis.py`).
+3. **Stability Over Time**  
+   - Energy levels must remain stable or increase over 100+ simulation cycles without decay.
 
----
+4. **Sensor Accuracy**  
+   - Voltage and current sensors must have less than 1% measurement error.
 
-## 3. **Simulated Ambient Harvesting Effect**
-- **Definition**: Implied increase in available power attributed to the model's checkpoints acting as passive ambient energy harvesting nodes.
-- **Target**: Observable trend showing power "boost" at mid-loop checkpoints.
-- **Evaluation**:
-  - Use voltage/current trends from `data_logging.py`.
-  - Confirm via consistent checkpoint power increases not explainable by circuit delay or artifacts.
+5. **System Response Time**  
+   - Control loop should operate within the defined sampling interval without lag.
 
----
+## Verification Methods
 
-## 4. **Sensor Integrity**
-- **Definition**: Validation that sensor readings are reliable and not due to noise, aliasing, or drift.
-- **Target**: No anomalous spikes/drops in current/voltage unless clearly documented as external changes.
-- **Evaluation**: Cross-check raw values; compare to expected values based on resistor calibration and expected range.
+- Continuous monitoring and logging via firmware sensors.
+- Simulation models running varied parameters.
+- Data analysis of logged real-time sensor data.
+- Statistical validation of sensor calibration.
 
 ---
 
-## 5. **Repeatability**
-- **Definition**: Ability to reproduce results with same simulated configuration.
-- **Target**: <10% variation across multiple simulation logs.
-- **Evaluation**: Repeat logging 3+ times and compare results using `analysis.py`.
-
----
-
-## Conclusion
-
-These success metrics are designed to evaluate IX-T purely in a simulation context. While they do not provide irrefutable physical proof of perpetual operation or net energy creation, they allow structured testing of feasibility claims in a way that meets engineering expectations for early conceptual models.
-
-For reviewers: Please refer to `hardware_build.md` and `/validation/` scripts to run and analyze simulations.
-
+Achieving these metrics supports the claim of a self-sustaining or energy-amplifying loop system.
