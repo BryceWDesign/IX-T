@@ -1,0 +1,33 @@
+dashboard:
+  title: "IX-T Ambient Energy Loop Dashboard"
+  refresh_interval_seconds: 30
+  data_source:
+    type: "json_api"
+    endpoint: "http://localhost:5000/api/metrics"
+  widgets:
+    - id: "voltage_chart"
+      type: "line_chart"
+      module_filter: "AntennaArray"
+      metric: "voltage"
+      unit: "V"
+      color: "#1f77b4"
+      y_axis_label: "Voltage (V)"
+    - id: "efficiency_gauge"
+      type: "gauge"
+      module_filter: "CheckpointCharger"
+      metric: "efficiency"
+      unit: "%"
+      thresholds:
+        warning: 80
+        critical: 50
+    - id: "loss_chart"
+      type: "bar_chart"
+      module_filter: "LoopController"
+      metric: "loss"
+      unit: "%"
+      color: "#ff7f0e"
+  notifications:
+    enabled: true
+    levels: ["warning", "critical"]
+    email_recipients:
+      - "admin@ix-tproject.org"
