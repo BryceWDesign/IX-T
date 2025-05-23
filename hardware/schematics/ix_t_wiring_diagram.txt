@@ -1,0 +1,33 @@
+IX-T Wiring Diagram Overview
+============================
+
+This file details the wiring connections between major components of the IX-T prototype circuit.
+
+Components:
+- Energy Loop Circuit Board (main PCB)
+- Checkpoint Modules (3 units)
+- Power Supply Unit (regulated 5V)
+- Microcontroller Board (Raspberry Pi Pico)
+- Data Logger Module (SD Card Interface)
+- Sensor Array (Voltage, Current sensors)
+
+Wiring Instructions:
+1. Connect Power Supply Unit 5V output to the main PCB power input.
+2. Wire checkpoint modules in series along the energy loop path.
+3. Connect each checkpoint module to the microcontroller analog input pins for monitoring.
+4. Connect sensor outputs to designated analog inputs on the microcontroller.
+5. Connect data logger SPI pins to microcontroller SPI interface.
+6. Ground all modules and components to common ground bus on the main PCB.
+7. Use shielded cables for sensor signals to reduce noise.
+
+Cable Color Coding (recommended):
+- Red: +5V power lines
+- Black: Ground
+- Blue: Signal lines
+
+Notes:
+- Maintain short wire lengths to reduce resistance and noise.
+- Use secure connectors to avoid intermittent contact.
+- Follow standard ESD precautions when assembling.
+
+This wiring guide will be accompanied by PCB layouts and physical assembly instructions in subsequent files.
