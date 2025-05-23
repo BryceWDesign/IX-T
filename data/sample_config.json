@@ -1,0 +1,10 @@
+{
+  "initial_energy": 100.0,
+  "loss_factor": 0.05,
+  "simulation_steps": 10,
+  "checkpoints": [
+    { "id": 1, "boost": 5.0 },
+    { "id": 2, "boost": 7.5 },
+    { "id": 3, "boost": 10.0 }
+  ]
+}
