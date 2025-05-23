@@ -1,0 +1,17 @@
+Component,Quantity,Unit Price (USD),Total Price (USD),Notes
+USB Power Source (5V 2A),1,10.00,10.00,Common mobile charger
+INA219 Sensor Module,3,4.50,13.50,I2C current/voltage sensor
+ESP32 Dev Board,1,7.00,7.00,Microcontroller with WiFi/Bluetooth
+MicroSD Card Module,1,2.00,2.00,Optional for data logging
+MicroSD Card (8GB),1,5.00,5.00,Optional for data logging
+Resistor (1Ω),2,0.10,0.20,Shunt resistor
+Resistor (10Ω),2,0.05,0.10,Load resistor
+Resistor (100Ω),2,0.05,0.10,Load resistor
+Breadboard,1,7.00,7.00,Prototyping
+Jumper Wires,1 set,3.00,3.00,Prototyping
+Capacitors (10 µF),3,0.10,0.30,For noise suppression
+USB Cable,1,2.00,2.00,Connection to PC or power
+Mobile RF Interference Source (e.g., phone),1,0.00,0.00,Used as ambient noise
+Antenna Stub (optional),1,0.50,0.50,Simulated ambient interface
+,"",,
+**Total**,,"",**60.70**,
