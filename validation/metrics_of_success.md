@@ -1,62 +1,49 @@
-# Metrics of Success for IX-T Ambient Energy Harvesting System
+# IX-T Metrics of Success
 
-This document outlines the key measurable outcomes and criteria that indicate the IX-T system is functioning as intended and demonstrates feasibility for ambient energy harvesting with checkpoint amplification.
-
----
-
-## 1. Energy Stability and Sustainability
-
-- **Stable Voltage Levels:** Each checkpoint in the energy loop maintains or increases voltage levels without degradation over extended monitoring periods (e.g., 24+ hours).  
-- **Consistent Current Flow:** Current measurements remain steady or increase, indicating successful energy harvesting and checkpoint boosting.
+This document outlines the measurable criteria used to evaluate the feasibility and simulated performance of the IX-T ambient energy loop system. These metrics allow both developers and external reviewers to determine whether the system demonstrates practical potential based on logged and analyzed data.
 
 ---
 
-## 2. Power Output Growth
-
-- **Power Gain at Checkpoints:** Power (mW) at each checkpoint should show measurable increases compared to input harvester baseline, demonstrating checkpoint "charging" effect.  
-- **Energy Loop Sustainability:** The system should maintain power flow without external input (besides ambient energy harvesters), proving the circuit’s closed-loop efficacy.
-
----
-
-## 3. Efficiency Metrics
-
-- **Harvesting Efficiency:** Ratio of electrical power output at each checkpoint relative to theoretical ambient energy input estimates (based on component specs).  
-- **Boost Converter Efficiency:** Monitor input vs output power for boost converters to ensure minimal losses.
+## 1. **Power Consistency**
+- **Definition**: Stability of power output at each checkpoint over time.
+- **Target**: Variance within ±5% of mean power value at each checkpoint.
+- **Evaluation**: Visualized using power trend plots; quantified with standard deviation and coefficient of variation.
 
 ---
 
-## 4. Data Logging and Monitoring
-
-- **Continuous Data Capture:** Sensor data logged every 5 seconds without gaps or anomalies.  
-- **Error Rates:** No sensor read errors or communication failures over test periods.
-
----
-
-## 5. Simulation Validation
-
-- **Model Accuracy:** Simulation results (e.g., from Python scripts) correlate closely with measured hardware data within expected tolerances.  
-- **Scenario Testing:** Simulated responses to variable ambient energy inputs confirm system robustness.
+## 2. **Net Power Differential**
+- **Definition**: Total power observed across checkpoints versus initial input.
+- **Target**: Ideally close to zero for validation of lossless simulation; any net gain must be accompanied by explanation of energy sourcing (e.g., ambient input).
+- **Evaluation**: Compare summed power across all checkpoints using data analysis script (`analysis.py`).
 
 ---
 
-## 6. Success Thresholds (Example Values)
-
-| Metric                        | Threshold                      |
-|------------------------------|-------------------------------|
-| Voltage Stability             | ±5% variation over 24 hours   |
-| Power Output Increase         | ≥10% improvement at checkpoints|
-| Data Integrity               | 99.9% successful readings     |
-| Efficiency                   | ≥80% boost converter efficiency|
+## 3. **Simulated Ambient Harvesting Effect**
+- **Definition**: Implied increase in available power attributed to the model's checkpoints acting as passive ambient energy harvesting nodes.
+- **Target**: Observable trend showing power "boost" at mid-loop checkpoints.
+- **Evaluation**:
+  - Use voltage/current trends from `data_logging.py`.
+  - Confirm via consistent checkpoint power increases not explainable by circuit delay or artifacts.
 
 ---
 
-## 7. Next Steps Upon Meeting Metrics
-
-- Scale up number of checkpoints and harvesters.  
-- Optimize circuit layout for minimal loss.  
-- Explore commercial viability and patent potential.
+## 4. **Sensor Integrity**
+- **Definition**: Validation that sensor readings are reliable and not due to noise, aliasing, or drift.
+- **Target**: No anomalous spikes/drops in current/voltage unless clearly documented as external changes.
+- **Evaluation**: Cross-check raw values; compare to expected values based on resistor calibration and expected range.
 
 ---
 
-End of Metrics of Success.
+## 5. **Repeatability**
+- **Definition**: Ability to reproduce results with same simulated configuration.
+- **Target**: <10% variation across multiple simulation logs.
+- **Evaluation**: Repeat logging 3+ times and compare results using `analysis.py`.
+
+---
+
+## Conclusion
+
+These success metrics are designed to evaluate IX-T purely in a simulation context. While they do not provide irrefutable physical proof of perpetual operation or net energy creation, they allow structured testing of feasibility claims in a way that meets engineering expectations for early conceptual models.
+
+For reviewers: Please refer to `hardware_build.md` and `/validation/` scripts to run and analyze simulations.
 
