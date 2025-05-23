@@ -1,0 +1,26 @@
+IX-T Prototype Wiring Diagram Overview:
+
+- Microcontroller (RP2040)
+  - GPIO Pins connected to Voltage Sensors at Checkpoints 1, 2, 3 (ADC inputs)
+  - GPIO Pins connected to Current Sensors at Checkpoints 1, 2, 3 (Digital or analog inputs)
+  - SPI interface connected to SD Card Module for data logging
+  - Power pins connected to regulated 5V supply
+  - Ground common to all components
+
+- Voltage Sensors
+  - Signal outputs connected to ADC pins on microcontroller
+  - Power and ground connected appropriately
+
+- Current Sensors
+  - Outputs connected to microcontroller analog/digital inputs
+  - Powered from regulated supply
+
+- SD Card Module
+  - SPI pins connected to microcontroller SPI interface (MISO, MOSI, SCLK, CS)
+  - Power and ground connected to 3.3V regulated supply
+
+- Power Supply
+  - Provides stable 5V to microcontroller and sensors
+  - Ground shared with all components
+
+Ensure proper shielding and grounding to minimize noise and interference.
