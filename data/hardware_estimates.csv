@@ -1,0 +1,13 @@
+Component,Description,Estimated Cost (USD),Typical Energy Output,Source/Vendor
+Adafruit ItsyBitsy M4,Microcontroller for control and logging,12.50,N/A,Adafruit
+10F Supercapacitor,Energy storage element at each checkpoint,3.00 each,N/A,DigiKey
+Powercast P2110B,RF energy harvester,15.00,up to 1 mW @ 0 dBm RF,Powercast
+Mide Volture V25W,Piezoelectric energy generator,30.00,up to 3 mW (motion-dependent),Mide
+TEC1-12706,Thermoelectric generator,8.00,up to 5W (under high ∆T),AliExpress
+TPS61200,Boost converter IC,2.50,N/A,Texas Instruments
+INA219,Energy monitoring IC,1.50,N/A,Adafruit
+Analog switches (e.g., 4066),Gating logic for checkpoints,0.50,N/A,DigiKey
+3D printed case,Prototype housing,5.00,N/A,Local/online printing service
+RF Shielding box,To test effects in low-RF environments,20.00,N/A,Amazon
+
+TOTAL ESTIMATED COST (prototype),,approx. $110 USD,,Various
