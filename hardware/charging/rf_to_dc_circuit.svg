@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- RF-to-DC Converter Circuit Schematic for IX-T Drone Charging Module -->
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .label { font: 14px sans-serif; fill: #000; }
+    .wire { stroke: #000; stroke-width: 2; }
+    .part { stroke: #000; stroke-width: 2; fill: none; }
+  </style>
+
+  <!-- Antenna Input -->
+  <line x1="50" y1="300" x2="100" y2="300" class="wire"/>
+  <text x="20" y="305" class="label">ANT</text>
+
+  <!-- Matching Network -->
+  <rect x="100" y="250" width="60" height="100" class="part"/>
+  <text x="105" y="310" class="label">Matching Network</text>
+  <line x1="160" y1="300" x2="180" y2="300" class="wire"/>
+
+  <!-- Schottky Diode Rectifier -->
+  <rect x="180" y="250" width="80" height="100" class="part"/>
+  <text x="185" y="310" class="label">D1/D2</text>
+  <text x="185" y="325" class="label">SMS7630</text>
+  <line x1="260" y1="300" x2="280" y2="300" class="wire"/>
+
+  <!-- Capacitor -->
+  <line x1="280" y1="280" x2="280" y2="320" class="wire"/>
+  <line x1="275" y1="280" x2="285" y2="280" class="wire"/>
+  <line x1="275" y1="320" x2="285" y2="320" class="wire"/>
+  <text x="290" y="305" class="label">C1</text>
+
+  <!-- Voltage Doubler Stages -->
+  <rect x="300" y="250" width="140" height="100" class="part"/>
+  <text x="310" y="305" class="label">Voltage Doubler</text>
+  <text x="310" y="320" class="label">Cockcroft-Walton</text>
+  <line x1="440" y1="300" x2="460" y2="300" class="wire"/>
+
+  <!-- BQ25570 Power Mgmt IC -->
+  <rect x="460" y="250" width="100" height="100" class="part"/>
+  <text x="465" y="305" class="label">BQ25570</text>
+  <line x1="560" y1="300" x2="580" y2="300" class="wire"/>
+
+  <!-- Supercapacitor -->
+  <line x1="580" y1="280" x2="580" y2="320" class="wire"/>
+  <circle cx="580" cy="300" r="20" class="part"/>
+  <text x="605" y="305" class="label">SuperCap</text>
+
+  <!-- Output to Battery -->
+  <line x1="600" y1="300" x2="700" y2="300" class="wire"/>
+  <text x="710" y="305" class="label">+DC OUT → Battery</text>
+
+  <!-- Ground reference -->
+  <line x1="580" y1="320" x2="580" y2="350" class="wire"/>
+  <polygon points="570,350 590,350 580,370" style="fill:#000"/>
+
+</svg>
